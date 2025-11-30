@@ -1,0 +1,6 @@
+@UniversityTuitionPaymentSystem_HostAddress = http://localhost:5157
+
+GET {{UniversityTuitionPaymentSystem_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
