@@ -14,7 +14,7 @@ The chatbot understands user intent using a Local LLM (Ollama + Mistral), routes
 -  PostgreSQL + Entity Framework backend
 
 
-## 🏗 System Architecture
+## System Architecture
 
 React Chat UI
 ⬇
