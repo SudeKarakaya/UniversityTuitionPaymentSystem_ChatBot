@@ -5,21 +5,16 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using UniversityTuitionPaymentSystem.Data;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<UniversityDatabase>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-
-
+// Database
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
     ?? "Host=localhost;Port=5432;Database=universitydb;Username=postgres;Password=postgres";
 
 builder.Services.AddDbContext<UniversityDatabase>(options =>
     options.UseNpgsql(connectionString));
 
-
+// JWT Auth
 var jwtKey = builder.Configuration["Jwt:Key"] ?? "SUPER_SECRET_KEY_CHANGE_IN_PROD";
 var keyBytes = Encoding.ASCII.GetBytes(jwtKey);
 
@@ -43,10 +38,10 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization();
 
-
+// Controllers
 builder.Services.AddControllers();
 
-
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -55,7 +50,6 @@ builder.Services.AddSwaggerGen(c =>
         Title = "University Tuition API",
         Version = "v1"
     });
-
 
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
@@ -70,37 +64,33 @@ builder.Services.AddSwaggerGen(c =>
         {
             new OpenApiSecurityScheme
             {
-                Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
             },
             new string[] {}
         }
-    });
-
-    // NOT: Deploy sonrasý Gateway URL'i buraya yaz:
-    c.AddServer(new OpenApiServer
-    {
-        Url = "https://<GATEWAY-URL>",
-        Description = "API Gateway"
     });
 });
 
 var app = builder.Build();
 
+// Swagger UI
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "University Tuition API v1");
 });
 
-
 app.UseHttpsRedirection();
-
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
-
+// DATABASE MIGRATION SEED
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<UniversityDatabase>();

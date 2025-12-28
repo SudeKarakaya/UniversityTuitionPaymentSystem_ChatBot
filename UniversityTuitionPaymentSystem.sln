@@ -7,6 +7,48 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityTuitionPaymentSys
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityTuitionPaymentGateway", "UniversityTuitionPaymentGateway\UniversityTuitionPaymentGateway.csproj", "{52412705-6DAA-4B58-AD00-421E68B54E80}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "chat-app", "chat-app\", "{07802A9F-1BA9-D39F-7FC0-DC3EFD4C8015}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57550"
+		Debug.AspNetCompiler.PhysicalPath = "chat-app\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57550\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57550"
+		Release.AspNetCompiler.PhysicalPath = "chat-app\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57550\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57550"
+		SlnRelativePath = "chat-app\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "functions", "functions\", "{3898C9CB-6A6A-730C-E269-F2B00098651F}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_64160"
+		Debug.AspNetCompiler.PhysicalPath = "functions\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64160\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_64160"
+		Release.AspNetCompiler.PhysicalPath = "functions\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64160\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "64160"
+		SlnRelativePath = "functions\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +63,14 @@ Global
 		{52412705-6DAA-4B58-AD00-421E68B54E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52412705-6DAA-4B58-AD00-421E68B54E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52412705-6DAA-4B58-AD00-421E68B54E80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07802A9F-1BA9-D39F-7FC0-DC3EFD4C8015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07802A9F-1BA9-D39F-7FC0-DC3EFD4C8015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07802A9F-1BA9-D39F-7FC0-DC3EFD4C8015}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{07802A9F-1BA9-D39F-7FC0-DC3EFD4C8015}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3898C9CB-6A6A-730C-E269-F2B00098651F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3898C9CB-6A6A-730C-E269-F2B00098651F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3898C9CB-6A6A-730C-E269-F2B00098651F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3898C9CB-6A6A-730C-E269-F2B00098651F}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
