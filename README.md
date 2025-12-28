@@ -16,25 +16,15 @@ The chatbot understands user intent using a Local LLM (Ollama + Mistral), routes
 
 ## System Architecture
 
-React Chat UI
-⬇
-Firestore (messages)
-⬇
-Cloud Function triggered on user message
-⬇
-Ollama + Mistral (Intent + Parameters)
-⬇
-API Gateway (YARP)
-⬇
-ASP.NET Tuition API
-(PostgreSQL + EF Core)
-⬇
-Backend Response
-⬇
-Bot Reply written to Firestore
-⬇
-UI updates in real-time
-
+- React Chat UI
+- Firestore (messages)
+- Cloud Function triggered on user message
+- Ollama + Mistral (Intent + Parameters)
+- API Gateway (YARP)
+- ASP.NET Tuition API (PostgreSQL + EF Core)
+- Backend Response
+- Bot Reply written to Firestore
+- UI updates in real-time
 
 ## Technologies Used
 
